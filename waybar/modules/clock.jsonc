@@ -1,0 +1,7 @@
+{
+  "clock": {
+    "timezone": "Asia/Kolkata",
+    "format": "<span size='11pt'>{:%I.%M %p}</span>",
+    "format-alt": "<span size='11pt'>{:%d %B %Y}</span>"
+  }
+}

@@ -1,0 +1,22 @@
+/*
+ * @author Muhammad Haikal Hakim
+ * @repository https://github.com/haikal-hakim/athena
+ */
+{
+  "layer": "top",
+  "height": 42,
+  "spacing": 6,
+  "include": [
+    "./modules/groups.jsonc",
+    "./modules/distro.jsonc",
+    "./modules/storage.jsonc",
+    "./modules/system.jsonc",
+    "./modules/audio.jsonc",
+    "./modules/connections.jsonc",
+    "./modules/mpris.jsonc",
+    "./modules/clock.jsonc",
+  ],
+  "modules-left": ["group/distro-group", "group/storage", "mpris"],
+  "modules-center": ["hyprland/workspaces", "custom/tray-arrow"],
+  "modules-right": ["group/audio", "group/connections", "clock"],
+}

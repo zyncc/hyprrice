@@ -1,0 +1,79 @@
+@theme "colors.rasi"
+
+* {
+    font: "SF Pro Display Medium 13";
+
+    background-color: transparent;
+    text-color: @on-surface;
+
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    location: center;
+    width: 1400px;
+    y-offset: -20;
+
+    border: 1px;
+    border-radius: 24px;
+    border-color: @outline-variant;
+
+    background-color: @surface;
+}
+
+mainbox {
+    padding: 12px;
+    children: [ listview ];
+}
+
+listview {
+    columns: 4;
+    lines: 2;
+    fixed-height: true;
+
+    spacing: 12px;
+    background-color: transparent;
+}
+
+element {
+    orientation: vertical;
+
+    padding: 8px;
+    spacing: 8px;
+
+    border-radius: 16px;
+}
+
+element selected normal,
+element selected active {
+    background-color: @primary-container;
+}
+
+element-icon {
+    size: 256px;
+
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+element-text {
+    enabled: false;
+}
+
+inputbar {
+    enabled: false;
+}
+
+prompt {
+    enabled: false;
+}
+
+entry {
+    enabled: false;
+}
+
+scrollbar {
+    enabled: false;
+}

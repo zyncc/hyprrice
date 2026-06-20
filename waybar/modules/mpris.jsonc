@@ -1,0 +1,10 @@
+{
+  "mpris": {
+    "format": "{player_icon}  {title}",
+    "format-paused": "󰏤  {title}",
+    "max-length": 40,
+    "player-icons": {
+      "default": "󰎈",
+    },
+  },
+}

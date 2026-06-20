@@ -1,0 +1,53 @@
+[config.wallpaper]
+command = "awww img {{ image }} --transition-type center --transition-fps 200"
+
+[templates.hyprland]
+input_path = '/home/zync/.config/matugen/templates/hyprland-colors.lua'
+output_path = '/home/zync/.config/hypr/colors.lua'
+post_hook = 'hyprctl reload && $HOME/.config/scripts/generate-hyprlock'
+
+[templates.waybar]
+input_path = '/home/zync/.config/matugen/templates/colors.css'
+output_path = '/home/zync/.config/waybar/tokens/colors.css'
+post_hook = "pkill -SIGUSR2 waybar"
+
+[templates.rofi]
+input_path = '/home/zync/.config/matugen/templates/rofi-colors.rasi'
+output_path = '/home/zync/.config/rofi/colors.rasi'
+
+[templates.kitty]
+input_path = '/home/zync/.config/matugen/templates/kitty-colors.conf'
+output_path = '/home/zync/.config/kitty/colors.conf'
+post_hook = "kill -SIGUSR1 $(pgrep kitty)"
+
+[templates.nvim]
+input_path = "~/.config/matugen/templates/colors.json"
+output_path = "~/.config/nvim/colors/colors.json"
+post_hook = 'pkill -SIGUSR1 nvim'
+
+[templates.btop]
+input_path = '/home/zync/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop || true'
+
+[templates.yazi]
+input_path = '/home/zync/.config/matugen/templates/yazi-theme.toml'
+output_path = '~/.config/yazi/theme.toml'
+
+[templates.swaync]
+input_path = "/home/zync/.config/matugen/templates/sway-colors.conf"
+output_path = "~/.config/swaync/colors.css"
+post_hook = "swaync-client -rs"
+
+[templates.cava]
+input_path = '/home/zync/.config/matugen/templates/cava-colors.ini'
+output_path = '~/.config/cava/themes/matugen'
+post_hook = 'pkill -SIGUSR1 cava'
+
+[templates.zed]
+input_path = '/home/zync/.config/matugen/templates/zed-colors.json'
+output_path = '~/.config/zed/themes/matugen.json'
+
+[templates.obsidian]
+input_path = '/home/zync/.config/matugen/templates/obsidian.css'
+output_path = '/home/zync/Documents/Obsidian/.obsidian/snippets/matugen.css'
