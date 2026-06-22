@@ -11,6 +11,8 @@ hl.bind(
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
 
+hl.bind("SUPER + SHIFT + SPACE", hl.dsp.exec_cmd("/home/zync/.config/scripts/toggle-waybar"))
+
 -- TUIs
 hl.bind("SUPER + SHIFT + N", hl.dsp.exec_cmd("kitty -e nvim"))
 hl.bind("SUPER + CTRL + T", hl.dsp.exec_cmd("kitty --title floating-btop -e btop"))
@@ -32,7 +34,8 @@ hl.bind("SUPER + R", hl.dsp.exec_cmd("/home/zync/.config/waybar/scripts/launch.s
 hl.bind("SUPER + Space", hl.dsp.exec_cmd("rofi -show drun -i -no-levenshtein-sort -disable-history -sort"))
 
 hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd("hyprpicker -a -f 'hex' -n"))
-hl.bind("SUPER + L", hl.dsp.exec_cmd("wlogout"))
+hl.bind("SUPER + Escape", hl.dsp.exec_cmd("/home/zync/.config/rofi/scripts/system-menu.sh"))
+hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind("SUPER + PERIOD", hl.dsp.exec_cmd("rofi -modi emoji -show emoji"))
 hl.bind(
 	"SUPER + CTRL + V",

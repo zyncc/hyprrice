@@ -2,6 +2,6 @@
   "custom/distro": {
     "format": "",
     "tooltip": false,
-    "on-click": "kitty"
-  }
+    "on-click": "/home/zync/.config/rofi/scripts/system-menu.sh",
+  },
 }

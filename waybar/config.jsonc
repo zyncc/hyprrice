@@ -10,7 +10,6 @@
     "./modules/groups.jsonc",
     "./modules/distro.jsonc",
     "./modules/storage.jsonc",
-    "./modules/system.jsonc",
     "./modules/audio.jsonc",
     "./modules/connections.jsonc",
     "./modules/mpris.jsonc",

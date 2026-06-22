@@ -1,0 +1,111 @@
+@theme "colors.rasi"
+
+* {
+    font: "SF Pro Display Medium 13";
+
+    background-color: transparent;
+    text-color: @on-surface;
+
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    location: center;
+    width: 480;
+    y-offset: -20;
+
+    border: 1px;
+    border-radius: 24px;
+    border-color: @outline-variant;
+
+    background-color: @surface;
+}
+
+mainbox {
+    padding: 12px;
+}
+
+inputbar {
+    background-color: @surface-container;
+    border: 2px;
+    border-radius: 16px;
+    border-color: @outline;
+
+    padding: 8px 16px;
+    spacing: 8px;
+
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @primary;
+}
+
+entry {
+    text-color: @on-surface;
+    placeholder: "Search";
+    placeholder-color: @on-surface-variant;
+}
+
+message {
+    margin: 12px 0 0;
+    border-radius: 16px;
+    border-color: @surface-container-high;
+    background-color: @surface-container-high;
+}
+
+textbox {
+    padding: 8px 24px;
+    background-color: @surface-container-high;
+    text-color: @on-surface;
+}
+
+listview {
+    background-color: transparent;
+    margin: 12px 0 0;
+    columns: 1;
+    lines: 8;
+    fixed-height: false;
+}
+
+element {
+    padding: 8px 16px;
+    spacing: 8px;
+    border-radius: 16px;
+    text-color: @on-surface;
+}
+
+element normal urgent {
+    text-color: @error;
+}
+
+element normal active {
+    text-color: @primary;
+}
+
+element selected normal,
+element selected active {
+    background-color: @primary-container;
+    text-color: @on-primary-container;
+}
+
+element-icon {
+    size: 1em;
+    vertical-align: 0.5;
+}
+
+element selected normal element-icon,
+element selected active element-icon {
+    text-color: @on-primary-container;
+}
+
+element-text {
+    text-color: inherit;
+}
+
+configuration {
+    show-icons: false;
+    drun-display-format: "{name}";
+}

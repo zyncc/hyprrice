@@ -1,10 +1,11 @@
 #!/bin/bash
 
-option=$(printf "Hyprland\nKitty\nWaybar\nSwayNC" | rofi -dmenu -p "Edit Config")
+option=$(printf "Hyprland\nKitty\nWaybar\nSwayNC" | rofi -dmenu -p "Edit Config" --config /home/zync/.config/rofi/config.rasi -theme /home/zync/.config/rofi/no-icons-config.rasi)
 
 case "$option" in
-    "Hyprland") kitty --hold nvim "/home/zync/.config/hypr/hyprland.lua" ;;
-    "Kitty") kitty --hold nvim "/home/zync/.config/kitty/kitty.conf" ;;
-    "Waybar") kitty --hold nvim "/home/zync/.config/waybar/config.jsonc" ;;
-    "SwayNC") kitty --hold nvim "/home/zync/.config/swaync/config.json" ;;
+"Hyprland") kitty --hold nvim "/home/zync/.config/hypr/hyprland.lua" ;;
+"Kitty") kitty --hold nvim "/home/zync/.config/kitty/kitty.conf" ;;
+"Waybar") kitty --hold nvim "/home/zync/.config/waybar/config.jsonc" ;;
+"SwayNC") kitty --hold nvim "/home/zync/.config/swaync/config.json" ;;
 esac
+
