@@ -35,7 +35,6 @@ hl.bind("SUPER + Space", hl.dsp.exec_cmd("rofi -show drun -i -no-levenshtein-sor
 
 hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd("hyprpicker -a -f 'hex' -n"))
 hl.bind("SUPER + Escape", hl.dsp.exec_cmd("/home/zync/.config/rofi/scripts/system-menu.sh"))
-hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind("SUPER + PERIOD", hl.dsp.exec_cmd("rofi -modi emoji -show emoji"))
 hl.bind(
 	"SUPER + CTRL + V",
@@ -43,6 +42,17 @@ hl.bind(
 		"cliphist list | rofi -dmenu -i -p 'Search Clipboard' -display-columns 2 | cliphist decode | wl-copy"
 	)
 )
+-- Toggle Hyprland Layout
+-- local current_layout = "dwindle"
+-- -- hl.bind("SUPER + L", function()
+-- 	current_layout = current_layout == "dwindle" and "scrolling" or "dwindle"
+--
+-- 	hl.config({
+-- 		general = {
+-- 			layout = current_layout,
+-- 		},
+-- 	})
+-- end)
 
 -- Screenshot
 hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m region --freeze --clipboard-only"))
@@ -83,7 +93,3 @@ hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
-
--- hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'
-
--- hyprshutdown -t 'Restarting...' --post-cmd 'reboot'
